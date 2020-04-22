@@ -18,7 +18,7 @@ This driver requires that you are using `owen-it/laravel-auditing: ^7.0`. Provid
 you can install the driver like so:
 
 ```
-composer require iconscout/laravel-auditing-elasticsearch
+composer require 1cool/laravel-auditing-elasticsearch
 ```
 
 ## Setup
