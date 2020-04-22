@@ -57,6 +57,7 @@ class ElasticSearch implements AuditDriver
      * @param \OwenIt\Auditing\Contracts\Auditable $model
      *
      * @return \OwenIt\Auditing\Contracts\Audit
+     * @throws \OwenIt\Auditing\Exceptions\AuditingException
      */
     public function audit(Auditable $model): Audit
     {
@@ -146,7 +147,7 @@ class ElasticSearch implements AuditDriver
         $params = [
             'index' => $this->index,
             'type' => $this->type,
-            'id' => Uuid::uuid4(),
+            'id' => Uuid::uuid4()->toString(),
             'body' => $model
         ];
 
